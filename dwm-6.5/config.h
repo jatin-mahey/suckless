@@ -4,11 +4,12 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "terminus:size=10" };
+static const char dmenufont[]       = "terminus:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -94,6 +95,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ 0,                       XF86XK_AudioRaiseVolume,  spawn, {.v = upvol     } },
 	{ 0,                       XF86XK_AudioLowerVolume,  spawn, {.v = downvol   } },
 	{ 0,                       XF86XK_AudioMute,         spawn, {.v = mutevol   } },
