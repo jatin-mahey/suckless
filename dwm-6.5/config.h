@@ -69,6 +69,7 @@ static const char *mutevol[]    = { "/usr/bin/wpctl",   "set-mute",   "@DEFAULT_
 static const char *mutemic[]    = { "/usr/bin/wpctl",   "set-mute",   "@DEFAULT_AUDIO_SOURCE@",    "toggle",   NULL };
 static const char *uplight[]    = { "/usr/bin/xbacklight",   "-inc", "5", NULL };
 static const char *downlight[]  = { "/usr/bin/xbacklight",   "-dec", "5", NULL };
+static const char *escreen[]    = { "/usr/bin/sh", "/home/jroc/Scripts/extern-screen.sh", NULL, NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -104,6 +105,7 @@ static const Key keys[] = {
 	{ 0,                       XF86XK_AudioMicMute,      spawn, {.v = mutemic   } },
 	{ 0,                       XF86XK_MonBrightnessUp,   spawn, {.v = uplight   } },
 	{ 0,                       XF86XK_MonBrightnessDown, spawn, {.v = downlight } },
+	{ 0,                       XF86XK_Display,           spawn, {.v = escreen } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
