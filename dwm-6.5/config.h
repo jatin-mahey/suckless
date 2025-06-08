@@ -8,8 +8,8 @@ static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "terminus:size=10" };
-static const char dmenufont[]       = "terminus:size=10";
+static const char *fonts[]          = { "Terminess Nerd Font:size=12" };
+static const char dmenufont[]       = "Terminess Nerd Font:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -67,8 +67,8 @@ static const char *upvol[]      = { "/usr/bin/wpctl",   "set-volume", "@DEFAULT_
 static const char *downvol[]    = { "/usr/bin/wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "5%-",      NULL };
 static const char *mutevol[]    = { "/usr/bin/wpctl",   "set-mute",   "@DEFAULT_AUDIO_SINK@",      "toggle",   NULL };
 static const char *mutemic[]    = { "/usr/bin/wpctl",   "set-mute",   "@DEFAULT_AUDIO_SOURCE@",    "toggle",   NULL };
-static const char *uplight[]    = { "/usr/bin/xbacklight",   "-inc", "5", NULL };
-static const char *downlight[]  = { "/usr/bin/xbacklight",   "-dec", "5", NULL };
+static const char *uplight[]    = { "/usr/bin/brightnessctl",   "set", "5%+", NULL };
+static const char *downlight[]  = { "/usr/bin/brightnessctl",   "set", "5%-", NULL };
 static const char *escreen[]    = { "/usr/bin/sh", "/home/jroc/Scripts/extern-screen.sh", NULL, NULL };
 
 static const Key keys[] = {
